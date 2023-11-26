@@ -1,43 +1,43 @@
-# cloud-automation
+# Cloud Automation: HA Web App Deployment with Terraform
 
-Project Overview: 
-	Deploy a HA web app using Terraform
- 
+## Project Overview
 
-Repository Contents:
-	README.md
-	LICENSE
-	architecture_diagram		
-		It includes an architecture diagram of the project and the Python script which can be used to create the diagram. 
-	cloud-web-app-terraform-project
-		It includes the Terraform scripts to create all the required services in the AWS cloud mentioned in the architecture diagram 
+Deploy a highly available web app using Terraform.
 
+## Repository Contents
 
-Getting Started:
-	clone the repository and follow the instructions
+- **README.md**: Documentation for getting started, prerequisites, and steps.
+- **LICENSE**: License information.
+- **architecture_diagram**: Contains an architecture diagram of the project and a Python script to create the diagram.
+- **cloud-web-app-terraform-project**: Terraform scripts to create AWS cloud services mentioned in the architecture diagram.
 
+## Getting Started
 
-Prerequisites:
-	An AWS account with a service user access (IAM key) with required privileges to create the cloud services mentioned in the Architecture.
-	Terraform must be installed and running
+1. Clone the repository.
+2. Follow the instructions below.
 
+## Prerequisites
 
-Steps:
-	Clone the repository
-	cd cloned-repo directory
-	terraform init
-	terraform plan
-		Note: at this point, it will ask you to enter the AWS ACCESS KEY ID and SECRET KEY. Once you enter the access key and SECRET ID, It will ask you for a base_name.
-  
-	What is a base_name: A common name that you have decided to give to the project. Example: assignment-project-01.
-	Where it will be used: It will be used as the base resource name for all the resources that will be created using the script.
-	Why we need a base name: To provide a standard naming convention for all the resources created.
-	Benefits: Easy to understand the resources that are created for each environment/Project.
+- AWS account with a service user access (IAM key) and required privileges.
+- Installed and configured Terraform.
 
- 	Once validated the steps that the script is going execute in your cloud, 
+## Steps
 
-	terraform apply:
-	Provide the same ACCESS KEY ID, SECRET KEY, and the base name.
-	
-	terraform destroy:
-		To terminate the services created in the AWS account by the terraform script.
+1. Clone the repository.
+2. Navigate to the cloned repository directory.
+3. Run `terraform init`.
+4. Run `terraform plan`.
+   - Enter AWS ACCESS KEY ID and SECRET KEY.
+   - Enter a `base_name` when prompted.
+     - `base_name`: A common name for the project (e.g., assignment-project-01).
+   - Review the plan and proceed if satisfied.
+5. Run `terraform apply`.
+   - Provide ACCESS KEY ID, SECRET KEY, and the `base_name`.
+6. To destroy created services, run `terraform destroy`.
+
+### Note
+
+- `base_name`: Common name for project resources, used for standard naming convention.
+- Benefits: Provides clarity and standardization for created resources.
+
+Feel free to reach out for assistance or more information.
